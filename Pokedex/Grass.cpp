@@ -1,0 +1,21 @@
+#include "Grass.h"
+using namespace std;
+Grass::Grass() {
+
+}
+// constructor with initial information.
+Grass::Grass(int id, string name, int typeID) {
+	this->m_id = id;
+	this->m_Name = name;
+	this->m_Typeid = typeID;
+}
+// show all the information of pokemon
+void Grass::showInfo() {
+	cout << "The Pokemon ID is: " << this->m_id;
+	cout << "\tThe name is: " << this->m_Name;
+	cout << "\tThe type is: " << this->getType() << endl;
+}
+// return the type.
+string Grass::getType() {
+	return string("Grass");
+}
